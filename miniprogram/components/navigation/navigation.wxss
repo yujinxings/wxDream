@@ -1,0 +1,107 @@
+/* miniprogram/components/navigation/navigation.wxss */
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 150rpx;
+  overflow: hidden;
+}
+
+.navigation .bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height:150rpx;
+  filter: blur(40px);
+  transform: scale(1);
+}
+
+.navigation .bg-img.active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: inherit;
+  transform: scale(1.3);
+  filter: blur(8px);
+}
+
+.paly-bg.active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.navigation .nav-capsule {
+  position: absolute;
+  left: 0;
+  width: 174rpx;
+  height: 60rpx;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 40rpx;
+  margin-left: 20rpx;
+  border: 2rpx solid rgba(192, 192, 192, 0.3);
+  display: flex;
+}
+
+.navigation .nav-box {
+  flex: 1;
+}
+
+.navigation .nav-back,
+.nav-home {
+  width: 34rpx;
+  height: 34rpx;
+  padding: 0 26rpx;
+  margin: 12rpx 0;
+}
+
+.navigation .nav-back {
+  border-right: 2rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-title-box {
+  width: calc(100vw - 420rpx);
+  position: fixed;
+  left: 210rpx;
+  top: 0;
+  overflow: hidden;
+}
+
+.nav-title {
+  display: inline-block;
+  height: 60rpx;
+  min-width: calc(100vw - 420rpx);
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #fff;
+  white-space: nowrap;
+}
+.nav-title.active{
+  animation: title 7s linear infinite;
+}
+
+@keyframes title {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-90%);
+  }
+
+  50.1% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

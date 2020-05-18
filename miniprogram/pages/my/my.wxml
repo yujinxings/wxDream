@@ -1,0 +1,20 @@
+<view class="my-user" wx:if="{{!isAuth}}">
+	<button class="user-button" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserAuth">获取权限</button>
+</view>
+
+<view class="my" wx:else>
+	<view class="my-user">
+		<image class="user-img" src="{{userInfo.url}}"></image>
+		<view class="user-name">{{userInfo.nickName}}</view>
+	</view>
+	<view class="my-title">{{songList[0]?'我的收藏':'暂无收藏歌曲哦'}}</view>
+	<scroll-view scroll-y style="height: calc(100vh - 290rpx);" bindscrolltolower="getPushSongList">
+		<view class="my-list">
+			<song-item wx:for="{{songList}}" wx:key="index" songName="{{item.name}}" songAlia="{{item.alia}}" songSinger="{{item.singer}}" index="{{index}}" songId="{{item.id}}" songList="{{songList}}"></song-item>
+			<loading wx:if="{{isLoading}}"></loading>
+			<view class="list-bottom" wx:if="{{!isMoreData}}">—— 已经到底啦 ——</view>
+			<view class="list-bai"></view>
+		</view>
+	</scroll-view>
+	<move-paly />
+</view>

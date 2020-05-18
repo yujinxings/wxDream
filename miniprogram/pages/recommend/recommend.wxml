@@ -1,0 +1,8 @@
+<view class="recommend">
+	<view class="recomend-list">
+		<view class="recomend-list-item">
+			<song-item wx:for="{{recommendList}}" wx:key="index" songName="{{item.name}}" songAlia="{{item.alia}}" songSinger="{{item.singer}}" index="{{index}}" songId="{{item.id}}" songList="{{recommendList}}" ></song-item>
+		</view>
+	</view>
+		<move-paly />
+</view>

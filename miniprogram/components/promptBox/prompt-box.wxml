@@ -1,0 +1,3 @@
+<view class="prompt {{isAccording?'active':''}}" style="bottom:{{bottom}}vh">
+  <view class="prompt-text">{{text}}</view>
+</view>

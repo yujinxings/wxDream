@@ -1,0 +1,10 @@
+{
+  "usingComponents":{
+    "navigation":"../../components/navigation/navigation",
+    "prompt-box":"../../components/promptBox/prompt-box"
+  },
+  "disableScroll": true,
+  "navigationStyle":"custom",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor":"#000000"
+}

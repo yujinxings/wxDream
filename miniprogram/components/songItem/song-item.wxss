@@ -1,0 +1,40 @@
+.item {
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+}
+
+.item-num {
+  flex: 0 0 100rpx;
+  text-align: center;
+}
+
+.item-title {
+  flex: 1;
+  width: 0;
+}
+
+.item-title .item-song {
+  font-size: 36rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-title .item-author {
+  font-size: 26rpx;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-icon {
+  flex: 0 0 80rpx;
+  padding-right: 20rpx;
+}
+
+.item-icon .item-icon-img {
+  width: 60rpx;
+  height: 60rpx;
+}

@@ -1,0 +1,112 @@
+.search{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.search-box{
+  position: relative;
+}
+.search-box .weui-input{
+  height: 70rpx;
+  border-radius: 35rpx;
+  background-color: rgba(121, 116, 116, 0.068);
+  padding-left: 100rpx;
+  font-size: 30rpx;
+}
+.search-box .input-img{
+  position: absolute;
+  left: 30rpx;
+  top: 35rpx;
+  width: 46rpx;
+  height: 46rpx;
+  transform: translateY(-50%);
+}
+.search-box .input-empty{
+  position: absolute;
+  right: 0rpx;
+  top:0rpx;
+  width: 80rpx;
+  height: 70rpx;
+  z-index: 999;
+  text-align: center;
+}
+.search-box .input-empty .input-empty-img{
+  margin-top: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.search-list{
+  margin-top: 20rpx;
+  padding:0 40rpx;
+}
+.search-list .list-item{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+.search-list .list-item .item-img{
+  width: 40rpx;
+  height: 40rpx;
+}
+.search-list .list-item .item-text{
+  padding-left: 20rpx;
+}
+.search-song{
+  position: relative;
+  left: 0;
+  top: 20px;
+}
+.search-song .search-leave{
+  height: 100rpx;
+}
+
+.search-top{
+  position: relative;
+  left: 0;
+  top: 20px;
+}
+.search-top .top-title{
+
+}
+.search-top .top-title{
+  margin-bottom: 20rpx;
+}
+.search-top .top-item{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.search-top .top-item .top-num{
+  flex: 0 0 60rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+  font-size: 36rpx;
+}
+.search-top .top-item:nth-of-type(2) .top-num{
+  color: red;
+}
+.search-top .top-item:nth-of-type(3) .top-num{
+  color: red;
+}
+.search-top .top-item:nth-of-type(4) .top-num{
+  color: red;
+}
+.search-top .top-item .top-text{
+  flex: 1;
+}
+.search-top .top-item .text-name{
+  font-size: 34rpx;
+  margin-bottom: 6rpx;
+}
+.search-top .top-item .text-describe{
+  font-size: 26rpx;
+  color: #999;
+}
+

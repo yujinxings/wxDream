@@ -1,0 +1,39 @@
+<navigation></navigation>
+<view class="search" style="top:{{top}}px">
+	<view class="search-box" id="search-box">
+		<input class="weui-input" value="{{text}}" bindinput='setSearchList' focus placeholder="搜索歌曲" />
+		<image class="input-img" src="../../images/search.png"></image>
+		<view class="input-empty" catchtap="setInputEmpty">
+			<image class="input-empty-img" src="../../images/empty.png" ></image>
+		</view>
+	</view>
+	<view class="search-list" wx:if="{{isSearchList}}" style="top:{{searchTop}}px">
+		<view class="list-item" wx:for="{{searchList}}" wx:key="index" data-text="{{item.name}}" bindtap="setInputText">
+			<image class="item-img" src="../../images/search.png"></image>
+			<view class="item-text">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="search-song" wx:if="{{isSongList}}">
+		<scroll-view scroll-y="true" style="max-height:calc(100vh - {{searchTop}}px);" bindscrolltolower="getPushSongList">
+			<song-item wx:for="{{songList}}" wx:key="index" songName="{{item.name}}" songAlia="{{item.alia}}" songSinger="{{item.artists}}" index="{{index}}" songId="{{item.id}}" songList="{{songList}}"></song-item>
+			<loading wx:if="{{isLoading}}"></loading>
+			<view class="search-leave"></view>
+		</scroll-view>
+	</view>
+	<view class="search-top" wx:if="{{isTopSearchList}}">
+		<scroll-view scroll-y="true" style="height:calc(100vh - {{searchTop}}px);">
+			<view class="top-title">热搜榜</view>
+			<view class="top-item" wx:for="{{topSearchList}}" wx:key="index" data-text="{{item.name}}" bindtap="setInputSong">
+				<view class="top-num">{{index+1}}</view>
+				<view class="top-text">
+					<view class="text-name">{{item.name}}</view>
+					<view class="text-describe">{{item.describe}}</view>
+				</view>
+			</view>
+
+			<view class="search-leave"></view>
+		</scroll-view>
+
+	</view>
+	<move-paly />
+</view>

@@ -1,0 +1,6 @@
+<view class="loading">
+	<view class="loading-item loading-one"></view>
+	<view class="loading-item loading-two"></view>
+	<view class="loading-item loading-three"></view>
+	<view class="loading-item loading-four"></view>
+</view>

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "navigation":"../../components/navigation/navigation",
+    "song-item":"../../components/songItem/song-item",
+    "move-paly":"../../components/movePaly/move-paly",
+    "loading":"../../components/loading/loading"
+  },
+  "navigationStyle":"custom",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor":"#000000"
+}

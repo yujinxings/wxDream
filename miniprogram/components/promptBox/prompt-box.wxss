@@ -1,0 +1,23 @@
+.prompt{
+  position: fixed;
+  left: 50vw;
+  bottom: 20vh;
+  z-index: 999;
+  transform: translateX(-50%);
+  transition: all .3s linear;
+  opacity: 0;
+}
+.prompt.active{
+  opacity: 1;
+}
+.prompt .prompt-text{
+  min-width: 120rpx;
+  max-width: 300rpx;
+  text-align: center;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  color: #000;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  box-shadow: 0rpx 0rpx 20rpx #ccc;
+}

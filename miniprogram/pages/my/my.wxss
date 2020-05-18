@@ -1,0 +1,39 @@
+.my{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.my-user{
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+}
+.my-user .user-img{
+  position: relative;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.my-user .user-name{
+  padding-left: 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #232323;
+}
+.my-title{
+  margin-top: 60rpx;
+  font-size: 42rpx;
+  padding: 0 40rpx;
+}
+.list-bai{
+  height: 40rpx;
+}
+.list-bottom{
+  font-size: 24rpx;
+  text-align: center;
+}
+

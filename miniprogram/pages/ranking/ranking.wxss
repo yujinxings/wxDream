@@ -1,0 +1,62 @@
+.ranking {
+  background-color: #fff;
+  width: 100vw;
+  min-height: 120vh;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.ranking-search{
+  position: relative;
+  height: 70rpx;
+  background-color: rgba(121, 116, 116, 0.068);
+  border-radius: 35rpx;
+  margin-top: 40rpx;
+}
+.search-img{
+  position: absolute;
+  left: 30rpx;
+  top: 35rpx;
+  width: 46rpx;
+  height: 46rpx;
+  transform: translateY(-50%);
+}
+.search-text{
+  position: absolute;
+  left: 100rpx;
+  top: 35rpx;
+  transform: translateY(-50%);
+  color: #cdcdcd;
+}
+.ranking-list .list-item {
+  display: flex;
+  margin-top: 60rpx;
+}
+.ranking-list .list-item:first-child{
+  margin-top: 40rpx;
+}
+.ranking-list .list-item image {
+  flex: 0 0 240rpx;
+  height: 240rpx;
+  border-radius: 20rpx;
+}
+
+.ranking-list .list-item .item-song {
+  flex: 1;
+  width: 0;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  color: #585858;
+}
+
+.ranking-list .item-song .item-song-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+

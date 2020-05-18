@@ -1,0 +1,10 @@
+<view class="item" data-src="" bindtap="palyMusic">
+	<view class="item-num">{{index+1}}</view>
+	<view class="item-title">
+		<view class="item-song">{{songName}} {{songAlia?' - ('+songAlia+')':''}}</view>
+		<view class="item-author">{{songSinger}}</view>
+	</view>
+	<view class="item-icon">
+		<image class="item-icon-img" src="../../images/paly.png" ></image>
+	</view>
+</view>

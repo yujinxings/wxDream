@@ -1,0 +1,32 @@
+<view class="move-paly" wx:if="{{song.songId}}">
+	<movable-area class="movable-area" wx:if="{{!isCurrSong}}">
+		<movable-view class="movable-view {{isPress?'active':'active-'+isDirection}}" x="{{x}}" y="{{y}}" direction="all" pointer-events="none" animation="{{false}}" catchtap="showCurrSong" bindtouchstart="areaStart" bindtouchend="areaEnd">
+			<view class="animation-list {{isPaly?'':'active'}}">
+				<view class="list-item list-outermost"></view>
+				<view class="list-item list-inside"></view>
+				<view class="list-item list-middle"></view>
+				<view class="list-item list-inside"></view>
+				<view class="list-item list-outermost"></view>
+			</view>
+		</movable-view>
+	</movable-area>
+	<view class="hied-paly" catchtouchmove="stopScroll" wx:if="{{isCurrSong}}">
+		<view class="hied-paly-bg" catchtap="hideCurrSong"></view>
+		<view class="animation-list {{isPaly?'':'active'}}">
+			<view class="list-item list-outermost"></view>
+			<view class="list-item list-inside"></view>
+			<view class="list-item list-middle"></view>
+			<view class="list-item list-inside"></view>
+			<view class="list-item list-outermost"></view>
+			<view class="list-title" catchtap="redirectsPaly">
+				<view class="{{song.songName.length+song.songAlia.length>10?'title-text':''}} {{isPaly?'':'stop'}}">
+					{{song.songName}}{{song.songAlia?' - ( '+song.songAlia+' )':''}}
+				</view>
+			</view>
+			<view class="list-image" catchtap="setPaly" wx:if="{{song.songId}}">
+				<image src="../../images/move_paly.png" class="list-img" wx:if="{{!isPaly}}"></image>
+				<image src="../../images/move_stop.png" class="list-img" wx:else=""></image>
+			</view>
+		</view>
+	</view>
+</view>

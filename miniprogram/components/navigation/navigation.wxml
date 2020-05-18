@@ -1,0 +1,15 @@
+<view class="navigation">
+	<image class="bg-img {{pageName=='paly'?'active':''}}" src="{{bgImg}}"></image>
+	<view class="paly-bg {{pageName=='paly'?'active':''}}"></view>
+	<view class="nav-capsule" style="top:{{top}}px">
+		<view class="nav-box" bindtap="clickBack">
+			<image class="nav-back" src="../../images/back.png"></image>
+		</view>
+		<view class="nav-box" bindtap="jumpsHome">
+			<image class="nav-home" src="../../images/home.png"></image>
+		</view>
+		<view class="nav-title-box" style="top:{{top}}px" >
+			<view class="nav-title {{title.length>=10?'active':''}}">{{title}}</view>
+		</view>
+	</view>
+</view>

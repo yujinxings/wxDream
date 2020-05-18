@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents":{
+    "move-paly":"../../components/movePaly/move-paly",
+    "song-item":"../../components/songItem/song-item",
+    "loading":"../../components/loading/loading"
+  }
+}

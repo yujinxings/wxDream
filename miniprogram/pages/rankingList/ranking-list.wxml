@@ -1,0 +1,21 @@
+<navigation bgImg="{{ranking.img}}"></navigation>
+<scroll-view scroll-y="true" style="height:100vh" bindscrolltolower="getPushSongList">
+	<view class="ranking-list">
+		<image class="bg-img" src="{{ranking.img}}"></image>
+		<view class="ranking-top">
+			<image class="img" src="{{ranking.img}}"></image>
+			<view class="top-content">
+				<view class="content-title">{{ranking.name}}</view>
+				<view class="content-name">dream音乐</view>
+				<view class="content-describe">{{ranking.describe}}</view>
+			</view>
+		</view>
+		<view class="ranking-song">
+			<song-item wx:for="{{songList}}" wx:key="index" songName="{{item.name}}" songAlia="{{item.alia}}" songSinger="{{item.singer}}" index="{{index}}" songId="{{item.id}}" songList="{{songList}}"></song-item>
+			<loading wx:if="{{isLoading}}"></loading>
+			<view class="list-bottom" wx:if="{{!isMoreData}}">—— 已经到底啦 ——</view>
+			<view class="list-bai"></view>
+		</view>
+		<move-paly />
+	</view>
+</scroll-view>

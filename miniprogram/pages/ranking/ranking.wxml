@@ -1,0 +1,17 @@
+<view class="ranking">
+	<view class="ranking-search" bindtap="redirectsSearch">
+		<image class="search-img" src="../../images/search.png"></image>
+		<view class="search-text">搜索歌曲</view>
+	</view>
+	<view class="ranking-list">
+		<view class="list-item" wx:for="{{rankingList}}" wx:key="index" data-list="{{item}}" bindtap="redirectsList">
+			<image src="{{item.rankingImg}}"></image>
+			<view class="item-song">
+				<view class="item-song-item" wx:for="{{songList[index]}}" wx:key="index">
+					{{index+1}}.{{item.name}}{{item.alia?' - ('+item.alia+')':''}}
+				</view>
+			</view>
+		</view>
+	</view>
+		<move-paly />
+</view>

@@ -1,0 +1,45 @@
+.loading{
+  display: flex;
+  height: 60rpx;
+  align-items: flex-end;
+  justify-content: center;
+}
+.loading .loading-item{
+  width: 6rpx;
+  border-radius: 2rpx;
+  background-color: red;
+  margin-left: 6rpx;
+}
+.loading .loading-one{
+  animation: loading-one .4s linear infinite;
+}
+.loading .loading-two{
+  animation: loading-two .4s linear infinite;
+}
+.loading .loading-three{
+  animation: loading-three .4s linear infinite;
+}
+.loading .loading-four{
+  animation: loading-four .4s linear infinite;
+  
+}
+@keyframes loading-one{
+  0%{height: 15rpx;}
+  90%{height: 35rpx;}
+  100%{height:15rpx;}
+}
+@keyframes loading-two{
+  0%{height: 40rpx;}
+  80%{height: 20rpx;}
+  100%{height: 40rpx;}
+}
+@keyframes loading-three{
+  0%{height: 20rpx;}
+  80%{height: 40rpx;}
+  100%{height: 20rpx;}
+}
+@keyframes loading-four{
+  0%{height: 16rpx;}
+  90%{height: 25rpx;}
+  100%{height: 16rpx;}
+}

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/recommend/recommend",
+    "pages/ranking/ranking",
+    "pages/rankingList/ranking-list",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/paly/paly",
+    "components/songItem/song-item",
+    "components/navigation/navigation",
+    "components/movePaly/move-paly",
+    "components/loading/loading",
+    "components/promptBox/prompt-box"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "dream音乐播放",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#333333",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "每日推荐",
+        "iconPath": "./images/recommend-1.png",
+        "selectedIconPath": "./images/recommend-2.png"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "text": "榜单",
+        "iconPath": "./images/ranking-1.png",
+        "selectedIconPath": "./images/ranking-2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/my-1.png",
+        "selectedIconPath": "./images/my-2.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": ["audio"],
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

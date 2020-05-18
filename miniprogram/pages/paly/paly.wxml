@@ -1,0 +1,48 @@
+<navigation bgImg="{{songImg}}" pageName="paly" title="{{song.songName}}{{song.songAlia?' - ( '+song.songAlia+' )':''}}"></navigation>
+<view class="paly" style="background-image:url({{songImg}})">
+	<view class="paly-bg"></view>
+	<view class="paly-content" style="top:{{height}}px">
+		<view class="content-record">
+			<image class="record-bg {{isPaly?'active':''}}" src="{{songImg}}"></image>
+			<image class="record-img {{isPaly?'active':''}}" src="../../images/c0u.png"></image>
+
+		</view>
+		<view class="content-pointer">
+			<image src="../../images/c2u.png"></image>
+		</view>
+		<view class="content-lyrics {{song.songLyric&&song.songLyric.length>10?'show':''}}">
+			<view class="lyrics-item active">暂无歌词</view>
+		</view>
+		<view class="content-lyrics {{song.songLyric&&song.songLyric.length>10?'':'show'}}" bind:touchstart="touchLyric" bind:touchend="stopTouchLyric" bind:touchcancel="stopTouchLyric">
+			<scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" style="height: 300rpx;">
+				<view class="lyrics-item {{centerScrollView==index?'active':''}}" wx:for="{{song.songLyric}}" wx:key="index" id="lyric{{index}}">{{item.text}}</view>
+			</scroll-view>
+		</view>
+		<view class="content-operation">
+			<view class="progress">
+				<view class="progress-time">{{currTime}}</view>
+				<slider class="progress-slider" bindtouchstart="setIsPress" bindchanging="sliderChangeing" bindchange="sliderChange" value="{{value}}" left-icon="cancel" right-icon="success_no_circle" block-size="12" activeColor="#F9F9F9" backgroundColor="#dbdbdb" />
+				<view class="progress-time">{{time}}</view>
+			</view>
+			<view class="change">
+				<view class="change-model">
+					<image class="model model-0" wx:if="{{model==0}}" catchtap="setModel" src="../../images/model_0.png"></image>
+					<image class="model model-1" wx:if="{{model==1}}" catchtap="setModel" src="../../images/model_1.png"></image>
+					<image class="model model-2" wx:if="{{model==2}}" catchtap="setModel" src="../../images/model_2.png"></image>
+				</view>
+				<image class="change-prev" catchtap="prevPaly" src="../../images/prev.png"></image>
+				<view class="change-paly">
+					<image class="paly-record" wx:if="{{!isPaly}}" src="../../images/start.png" bindtap="setPaly"></image>
+					<image class="paly-record" wx:else src="../../images/pause.png" bindtap="setPaly"></image>
+				</view>
+				<image class="change-next" catchtap="nextPaly" src="../../images/next.png"></image>
+				<view class="change-collection" bindtap='addCollection'>
+					<image class="collection" wx:if="{{!iscollection}}" src="../../images/collection_on.png"></image>
+					<image class="collection" wx:else src="../../images/collection_off.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<prompt-box id="prompt" />
+	
+</view>

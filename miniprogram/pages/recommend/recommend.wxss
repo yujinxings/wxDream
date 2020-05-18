@@ -1,0 +1,30 @@
+.recommend{
+  background-color: #fff;
+}
+
+.recommend .item{
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+}
+.recommend .item-num{
+  flex:0 0 100rpx;
+  text-align: center;
+}
+.recommend .item-title{
+  flex: 1;
+}
+.recommend .item-title .item-song{
+  font-size: 36rpx;
+}
+.recommend .item-title .item-author{
+  font-size: 26rpx;
+  color: #999;
+}
+.recommend .item-icon{
+  flex: 0 0 80rpx;
+  padding-right: 20rpx;
+}
+.recommend .item-icon image{
+  width: 80rpx;
+}
