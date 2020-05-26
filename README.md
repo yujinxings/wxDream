@@ -17,7 +17,7 @@
 6)	通过用户授权获取头像、昵称并且可以收藏歌曲  
 
 注：由于本项目涉及音乐播放无法以个人进行上线，如有需要可微信联系：YJX1165查看体验版  
-### 项目部分功能图片展示  
+### 项目部分功能图片展示:
 ![image](https://github.com/yujinxings/wxDream/blob/master/images/1.jpg)![image](https://github.com/yujinxings/wxDream/blob/master/images/2.jpg)![image](https://github.com/yujinxings/wxDream/blob/master/images/3.jpg)![image](https://github.com/yujinxings/wxDream/blob/master/images/4.jpg)![image](https://github.com/yujinxings/wxDream/blob/master/images/5.jpg)![image](https://github.com/yujinxings/wxDream/blob/master/images/6.jpg)![image](https://github.com/yujinxings/wxDream/blob/master/images/7.jpg)![image](https://github.com/yujinxings/wxDream/blob/master/images/8.jpg)  
 
 
